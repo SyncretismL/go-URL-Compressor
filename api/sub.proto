@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package compressor_grpc;
+
+option go_package = "internal/compressor_grpc";
+
+message CompressedURLRequest {
+    string fullURL = 1;
+  }
+
+message CompressedURLResponse {
+    string CompressedURL = 1;
+}
+
+message FullURLRequest {
+    string CompressedURL = 1;
+}
+
+message FullURLResponse {
+    string fullURL = 1;
+}
+
+service CompressingService {
+    rpc Create (CompressedURLRequest) returns (CompressedURLResponse);
+    rpc Get (FullURLRequest) returns (FullURLResponse);
+}

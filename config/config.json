@@ -1,0 +1,21 @@
+{
+    "database": {
+        "user": "syncretism",
+        "password": "admin",
+        "host": "postgres",
+        "port": "5432",
+        "name": "syncretism"  
+    },
+    "grpc": {
+        "adress": ":9001"
+    },
+    "log": {
+        "enable_console": true,
+        "console_JSON_format": true,
+        "console_level": "debug",
+        "enable_file": true,
+        "file_json_format": false,
+        "file_level": "info",
+        "file_location": "./logs.log"
+    }
+}
