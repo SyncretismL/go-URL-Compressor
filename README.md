@@ -1,1 +1,1 @@
-# go-url-compressor
+# RUN: docker-compose up
