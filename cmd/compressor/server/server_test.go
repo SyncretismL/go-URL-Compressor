@@ -24,7 +24,7 @@ func init() {
 	mockURLData := &mocks.URLDatas{}
 	mockURLData.On("SetURL", mock.AnythingOfType("*urlData.URLData")).Return(nil)
 	mockURLData.On("SetURLCompressed", mock.AnythingOfType("*urlData.URLData")).Return(nil)
-	mockURLData.On("GetCompressedURL", mock.AnythingOfType("*urlData.URLData")).Return(nil)
+	mockURLData.On("GetFullURL", mock.AnythingOfType("*urlData.URLData")).Return(nil)
 
 	compressor_grpc.RegisterCompressingServiceServer(s, &Server{urlDatas: mockURLData})
 	go func() {
